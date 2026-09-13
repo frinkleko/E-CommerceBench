@@ -20,9 +20,10 @@ opening balance, averaged over 5 independent episodes per model.
 
 <table>
 <caption>
-<b>Table 1:</b> End-of-year leaderboard, 22 models, five episodes each, sorted by mean final assets within tier.
+<b>Table 1:</b> End-of-year leaderboard, 21 models, five episodes each, sorted by mean final assets within tier.
 Bold values mark the best scored column. †GPT-5.5's spread is a population estimate, ¥689k on the sample estimator.
 ‡GPT-5.5's AnchorRatio averages three episodes, its two bankrupt runs opening no repeat order with a supplier it had already dealt with.
+Qwen3.8-Max and GLM-5.3 rows are post-publication evaluations under the same benchmark protocol.
 </caption>
 <thead>
 <tr>
@@ -96,6 +97,20 @@ Bold values mark the best scored column. †GPT-5.5's spread is a population est
   <td>1.309</td>
   <td>1,497</td>
   <td>812</td>
+  <td>0/5</td>
+</tr>
+<tr>
+  <td>Qwen3.8-Max</td>
+  <td>472</td>
+  <td>165</td>
+  <td>0.660</td>
+  <td>18.37</td>
+  <td>0.172</td>
+  <td>246</td>
+  <td>2.88</td>
+  <td>1.522</td>
+  <td>1,514</td>
+  <td>714</td>
   <td>0/5</td>
 </tr>
 <tr>
@@ -181,20 +196,6 @@ Bold values mark the best scored column. †GPT-5.5's spread is a population est
   <td>1.493</td>
   <td>1,510</td>
   <td>1,068</td>
-  <td>0/5</td>
-</tr>
-<tr>
-  <td>GLM-5.3 (high)</td>
-  <td>379</td>
-  <td>100</td>
-  <td>0.757</td>
-  <td>19.12</td>
-  <td>0.741</td>
-  <td>203</td>
-  <td>−0.79</td>
-  <td>1.561</td>
-  <td>1,377</td>
-  <td>1,010</td>
   <td>0/5</td>
 </tr>
 <tr>
@@ -294,20 +295,6 @@ Bold values mark the best scored column. †GPT-5.5's spread is a population est
   <td>1,430</td>
   <td>931</td>
   <td>0/5</td>
-</tr>
-<tr>
-  <td>GLM-5.3-Flash (high)</td>
-  <td>78</td>
-  <td>58</td>
-  <td>0.705</td>
-  <td>22.42</td>
-  <td>0.727</td>
-  <td>−17</td>
-  <td>3.46</td>
-  <td>1.520</td>
-  <td>1,321</td>
-  <td>1,111</td>
-  <td>1/5</td>
 </tr>
 <tr>
   <td>Kimi K2.6</td>
@@ -429,7 +416,7 @@ export DEEPSEEK_API_KEY=...         # DeepSeek
 
 ## Experiment Configuration
 
-`models_config.json` holds the 18 models of the leaderboard above, each at the
+`models_config.json` holds the original 18 models from the paper evaluation, each at the
 reasoning effort it was evaluated with. Pass an entry key to `--model`:
 
 ```
